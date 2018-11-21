@@ -1,8 +1,10 @@
 package com.example.asusrog.memorygame;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
@@ -280,7 +282,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private AlertDialog alertDialogConstructor(Context context, String title, int icon, boolean cancelable){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+        alertDialogBuilder
+                .setTitle(title)
+                .setIcon(icon)
+                .setCancelable(false)
+                .setNegativeButton("CERRAR", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        return alertDialog;
+    }
+
     private void calculate(){
+
         //Si las imagenes son iguales, quitarlas
         if(firstCard == secondCard){
             if(clickedFirst==0){
@@ -319,36 +338,68 @@ public class MainActivity extends AppCompatActivity {
 
             if(clickedSecond==0){
                 iv_11.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }else if(clickedSecond==1){
                 iv_12.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }else if(clickedSecond==2){
                 iv_13.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }else if(clickedSecond==3){
                 iv_14.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }else if(clickedSecond==4){
                 iv_21.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }else if(clickedSecond==5){
                 iv_22.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }else if(clickedSecond==6){
                 iv_23.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }else if(clickedSecond==7){
                 iv_24.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }else if(clickedSecond==8){
                 iv_31.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }else if(clickedSecond==9){
                 iv_32.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }else if(clickedSecond==10){
                 iv_33.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }else if(clickedSecond==11){
                 iv_34.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }else if(clickedSecond==12){
                 iv_41.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }else if(clickedSecond==13){
                 iv_42.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }else if(clickedSecond==14){
                 iv_43.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }else if(clickedSecond==15){
                 iv_44.setVisibility(View.INVISIBLE);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                alertDialog.show();
             }
 
             if(turn ==1){
