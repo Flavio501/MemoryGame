@@ -4,8 +4,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -338,67 +336,67 @@ public class MainActivity extends AppCompatActivity {
 
             if(clickedSecond==0){
                 iv_11.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.ballena_aleta,true);
                 alertDialog.show();
             }else if(clickedSecond==1){
                 iv_12.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.charrancito,true);
                 alertDialog.show();
             }else if(clickedSecond==2){
                 iv_13.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.codorniz,true);
                 alertDialog.show();
             }else if(clickedSecond==3){
                 iv_14.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.collar,true);
                 alertDialog.show();
             }else if(clickedSecond==4){
                 iv_21.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.coyote,true);
                 alertDialog.show();
             }else if(clickedSecond==5){
                 iv_22.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.huilota,true);
                 alertDialog.show();
             }else if(clickedSecond==6){
                 iv_23.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.lagartija,true);
                 alertDialog.show();
             }else if(clickedSecond==7){
                 iv_24.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.liebre,true);
                 alertDialog.show();
             }else if(clickedSecond==8){
                 iv_31.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.ballena_aleta,true);
                 alertDialog.show();
             }else if(clickedSecond==9){
                 iv_32.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.charrancito,true);
                 alertDialog.show();
             }else if(clickedSecond==10){
                 iv_33.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.codorniz,true);
                 alertDialog.show();
             }else if(clickedSecond==11){
                 iv_34.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.collar,true);
                 alertDialog.show();
             }else if(clickedSecond==12){
                 iv_41.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.coyote,true);
                 alertDialog.show();
             }else if(clickedSecond==13){
                 iv_42.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.huilota,true);
                 alertDialog.show();
             }else if(clickedSecond==14){
                 iv_43.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.lagartija,true);
                 alertDialog.show();
             }else if(clickedSecond==15){
                 iv_44.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.axolotl_1,true);
+                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.liebre,true);
                 alertDialog.show();
             }
 
@@ -502,22 +500,22 @@ public class MainActivity extends AppCompatActivity {
 
     //Cargar las imagenes
     private void frontOfCardsResorces(){
-        image101 = R.drawable.axolotl_1;
-        image102 = R.drawable.axolotl_1;
-        image103 = R.drawable.axolotl_1;
-        image104 = R.drawable.axolotl_1;
-        image105 = R.drawable.axolotl_1;
-        image106 = R.drawable.axolotl_1;
-        image107 = R.drawable.axolotl_1;
-        image108 = R.drawable.axolotl_1;
-        image201 = R.drawable.axolotl_1;
-        image202 = R.drawable.axolotl_1;
-        image203 = R.drawable.axolotl_1;
-        image204 = R.drawable.axolotl_1;
-        image205 = R.drawable.axolotl_1;
-        image206 = R.drawable.axolotl_1;
-        image207 = R.drawable.axolotl_1;
-        image208 = R.drawable.axolotl_1;
+        image101 = R.drawable.ballena_aleta;
+        image102 = R.drawable.charrancito;
+        image103 = R.drawable.codorniz;
+        image104 = R.drawable.collar;
+        image105 = R.drawable.coyote;
+        image106 = R.drawable.huilota;
+        image107 = R.drawable.lagartija;
+        image108 = R.drawable.liebre;
+        image201 = R.drawable.ballena_aleta;
+        image202 = R.drawable.charrancito;
+        image203 = R.drawable.codorniz;
+        image204 = R.drawable.collar;
+        image205 = R.drawable.coyote;
+        image206 = R.drawable.huilota;
+        image207 = R.drawable.lagartija;
+        image208 = R.drawable.liebre;
     }
 
 }
