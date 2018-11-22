@@ -280,7 +280,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private AlertDialog alertDialogConstructor(Context context, String title, int icon, boolean cancelable){
+    private AlertDialog alertDialogConstructor(Context context, String title, int message,int icon, boolean cancelable){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+        alertDialogBuilder
+                .setTitle(title)
+                .setIcon(icon)
+                .setMessage(message)
+                .setCancelable(false)
+                .setNegativeButton("CERRAR", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        return alertDialog;
+    }
+
+    private AlertDialog alertDialogConstructor(Context context, String title,int icon, boolean cancelable){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
         alertDialogBuilder
                 .setTitle(title)
