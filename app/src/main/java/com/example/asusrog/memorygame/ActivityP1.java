@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Handler;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -15,9 +16,9 @@ import android.widget.TextView;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class MainActivity extends AppCompatActivity {
+public class ActivityP1 extends AppCompatActivity {
 
-    TextView tv_p1, tv_p2;
+    TextView tv_p1;
 
     ImageView iv_11, iv_12, iv_13, iv_14, iv_21, iv_22, iv_23, iv_24,
             iv_31, iv_32, iv_33, iv_34, iv_41, iv_42, iv_43, iv_44;
@@ -30,17 +31,15 @@ public class MainActivity extends AppCompatActivity {
     int firstCard, secondCard;
     int clickedFirst, clickedSecond;
     int cardNumber = 1;
-    int turn = 1;
-    int playerPoints = 0, cpuPoints = 0;
+    int playerPoints = 0;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_p1);
 
         tv_p1 = (TextView) findViewById(R.id.tv_p1);
-        tv_p2 = (TextView) findViewById(R.id.tv_p2);
 
         iv_11 = (ImageView) findViewById(R.id.iv_11);
         iv_12 = (ImageView) findViewById(R.id.iv_12);
@@ -80,9 +79,6 @@ public class MainActivity extends AppCompatActivity {
 
         //Revolver imagenes
         Collections.shuffle(Arrays.asList(cardsArray));
-
-        //Cambiar el color del jugador 2
-        tv_p2.setTextColor(Color.GRAY);
 
         iv_11.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -297,7 +293,7 @@ public class MainActivity extends AppCompatActivity {
         return alertDialog;
     }
 
-    private AlertDialog alertDialogConstructor(Context context, String title,int icon, boolean cancelable){
+    private AlertDialog alertDialogConstructor(Context context, String title, Drawable icon, boolean cancelable){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
         alertDialogBuilder
                 .setTitle(title)
@@ -353,77 +349,73 @@ public class MainActivity extends AppCompatActivity {
 
             if(clickedSecond==0){
                 iv_11.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.ballena_aleta,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_11.getDrawable(),true);
                 alertDialog.show();
             }else if(clickedSecond==1){
                 iv_12.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.charrancito,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_12.getDrawable(),true);
                 alertDialog.show();
             }else if(clickedSecond==2){
                 iv_13.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.codorniz,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_13.getDrawable(),true);
                 alertDialog.show();
             }else if(clickedSecond==3){
                 iv_14.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.collar,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_14.getDrawable(),true);
                 alertDialog.show();
             }else if(clickedSecond==4){
                 iv_21.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.coyote,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_21.getDrawable(),true);
                 alertDialog.show();
             }else if(clickedSecond==5){
                 iv_22.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.huilota,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_22.getDrawable(),true);
                 alertDialog.show();
             }else if(clickedSecond==6){
                 iv_23.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.lagartija,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_23.getDrawable(),true);
                 alertDialog.show();
             }else if(clickedSecond==7){
                 iv_24.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.liebre,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_24.getDrawable(),true);
                 alertDialog.show();
             }else if(clickedSecond==8){
                 iv_31.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.ballena_aleta,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_31.getDrawable(),true);
                 alertDialog.show();
             }else if(clickedSecond==9){
                 iv_32.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.charrancito,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_32.getDrawable(),true);
                 alertDialog.show();
             }else if(clickedSecond==10){
                 iv_33.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.codorniz,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_33.getDrawable(),true);
                 alertDialog.show();
             }else if(clickedSecond==11){
                 iv_34.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.collar,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_34.getDrawable(),true);
                 alertDialog.show();
             }else if(clickedSecond==12){
                 iv_41.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.coyote,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_41.getDrawable(),true);
                 alertDialog.show();
             }else if(clickedSecond==13){
                 iv_42.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.huilota,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_42.getDrawable(),true);
                 alertDialog.show();
             }else if(clickedSecond==14){
                 iv_43.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.lagartija,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_43.getDrawable(),true);
                 alertDialog.show();
             }else if(clickedSecond==15){
                 iv_44.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(MainActivity.this,"INFO!",R.drawable.liebre,true);
+                AlertDialog alertDialog = alertDialogConstructor(ActivityP1.this,"INFO!",iv_44.getDrawable(),true);
                 alertDialog.show();
             }
-
-            if(turn ==1){
-                playerPoints++;
-                tv_p1.setText("P1: "+ playerPoints);
-            }else if(turn ==2){
-                cpuPoints++;
-                tv_p2.setText("P2: "+ cpuPoints);
-            }
+            
+            playerPoints++;
+            tv_p1.setText("P1: "+ playerPoints);
+            
         } else{
             iv_11.setImageResource(R.drawable.question);
             iv_12.setImageResource(R.drawable.question);
@@ -441,17 +433,7 @@ public class MainActivity extends AppCompatActivity {
             iv_42.setImageResource(R.drawable.question);
             iv_43.setImageResource(R.drawable.question);
             iv_44.setImageResource(R.drawable.question);
-
-            //Cambiar el turno
-            if(turn == 1){
-                turn = 2;
-                tv_p1.setTextColor(Color.GRAY);
-                tv_p2.setTextColor(Color.BLACK);
-            }else if(turn == 2){
-                turn = 1;
-                tv_p2.setTextColor(Color.GRAY);
-                tv_p1.setTextColor(Color.BLACK);
-            }
+            
         }
 
         iv_11.setEnabled(true);
@@ -492,14 +474,14 @@ public class MainActivity extends AppCompatActivity {
                 iv_42.getVisibility() == View.INVISIBLE &&
                 iv_43.getVisibility() == View.INVISIBLE &&
                 iv_44.getVisibility() == View.INVISIBLE){
-            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(MainActivity.this);
+            AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ActivityP1.this);
             alertDialogBuilder
-                    .setMessage("GAME OVER! \nP1: " + playerPoints + "\nP2: " + cpuPoints)
+                    .setMessage("GAME OVER! \nP1: " + playerPoints)
                     .setCancelable(false)
                     .setPositiveButton("NEW", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                            Intent intent = new Intent(getApplicationContext(),ActivityP1.class);
                             startActivity(intent);
                             finish();
                         }
@@ -507,6 +489,8 @@ public class MainActivity extends AppCompatActivity {
                     .setNegativeButton("EXIT", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
+                            Intent intent = new Intent(getApplicationContext(),MainMenu.class);
+                            startActivity(intent);
                             finish();
                         }
                     });
