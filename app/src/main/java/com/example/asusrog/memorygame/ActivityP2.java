@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
@@ -23,12 +24,16 @@ public class ActivityP2 extends AppCompatActivity {
     ImageView iv_11, iv_12, iv_13, iv_14, iv_21, iv_22, iv_23, iv_24,
             iv_31, iv_32, iv_33, iv_34, iv_41, iv_42, iv_43, iv_44;
 
-    Integer[] cardsArray = {101,102,103,104,105,106,107,108,201,202,203,204,205,206,207,208};
 
     int image101, image102, image103, image104, image105, image106,image107,image108,
             image201,image202, image203, image204, image205, image206,image207,image208;
 
-    int firstCard, secondCard;
+    Card card101,card102,card103,card104,card105,card106,card107,card108,
+            card201,card202,card203,card204,card205,card206,card207,card208;
+
+    ArrayList<Card> cartas = new ArrayList<Card>();
+
+    Card firstCard, secondCard;
     int clickedFirst, clickedSecond;
     int cardNumber = 1;
     int turn = 1;
@@ -78,177 +83,120 @@ public class ActivityP2 extends AppCompatActivity {
         iv_44.setTag("15");
 
         frontOfCardsResorces();
+        generateCards();
 
-        //Revolver imagenes
-        Collections.shuffle(Arrays.asList(cardsArray));
-
-        //Cambiar el color del jugador 2
-        tv_p2.setTextColor(Color.GRAY);
+        Collections.shuffle(cartas);
 
         iv_11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_11,theCard);
+                doStuff(iv_11,Integer.parseInt((String) v.getTag()));
             }
         });
         iv_12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_12,theCard);
+                doStuff(iv_12,Integer.parseInt((String) v.getTag()));
             }
         });
         iv_13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_13,theCard);
+                doStuff(iv_13,Integer.parseInt((String) v.getTag()));
             }
         });
         iv_14.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_14,theCard);
+                doStuff(iv_14,Integer.parseInt((String) v.getTag()));
             }
         });
         iv_21.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_21,theCard);
+                doStuff(iv_21,Integer.parseInt((String) v.getTag()));
             }
         });
         iv_22.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_22,theCard);
+                doStuff(iv_22,Integer.parseInt((String) v.getTag()));
             }
         });
         iv_23.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_23,theCard);
+                doStuff(iv_23,Integer.parseInt((String) v.getTag()));
             }
         });
         iv_24.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_24,theCard);
+                doStuff(iv_24,Integer.parseInt((String) v.getTag()));
             }
         });
         iv_31.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_31,theCard);
+                doStuff(iv_31,Integer.parseInt((String) v.getTag()));
             }
         });
         iv_32.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_32,theCard);
+                doStuff(iv_32,Integer.parseInt((String) v.getTag()));
             }
         });
         iv_33.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_33,theCard);
+                doStuff(iv_33,Integer.parseInt((String) v.getTag()));
             }
         });
         iv_34.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_34,theCard);
+                doStuff(iv_34,Integer.parseInt((String) v.getTag()));
             }
         });
         iv_41.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_41,theCard);
+                doStuff(iv_41,Integer.parseInt((String) v.getTag()));
             }
         });
         iv_42.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_42,theCard);
+                doStuff(iv_42,Integer.parseInt((String) v.getTag()));
             }
         });
         iv_43.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_43,theCard);
+                doStuff(iv_43,Integer.parseInt((String) v.getTag()));
             }
         });
         iv_44.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int theCard = Integer.parseInt((String) v.getTag());
-                doStuff(iv_44,theCard);
+                doStuff(iv_44,Integer.parseInt((String) v.getTag()));
             }
         });
     }
 
     private void doStuff(ImageView iv, int card){
         //Poner la imagen correcta al imageview
-        if(cardsArray[card]==101){
-            iv.setImageResource(image101);
-        }else if(cardsArray[card]==102){
-            iv.setImageResource(image102);
-        }else if(cardsArray[card]==103){
-            iv.setImageResource(image103);
-        }else if(cardsArray[card]==104){
-            iv.setImageResource(image104);
-        }else if(cardsArray[card]==105){
-            iv.setImageResource(image105);
-        }else if(cardsArray[card]==106){
-            iv.setImageResource(image106);
-        }else if(cardsArray[card]==107) {
-            iv.setImageResource(image107);
-        }else if(cardsArray[card]==108) {
-            iv.setImageResource(image108);
-        }else if(cardsArray[card]==201){
-            iv.setImageResource(image201);
-        }else if(cardsArray[card]==202){
-            iv.setImageResource(image202);
-        }else if(cardsArray[card]==203){
-            iv.setImageResource(image203);
-        }else if(cardsArray[card]==204){
-            iv.setImageResource(image204);
-        }else if(cardsArray[card]==205){
-            iv.setImageResource(image205);
-        }else if(cardsArray[card]==206) {
-            iv.setImageResource(image206);
-        }else if(cardsArray[card]==207) {
-            iv.setImageResource(image207);
-        }else if(cardsArray[card]==208) {
-            iv.setImageResource(image208);
-        }
+        iv.setImageResource(cartas.get(card).getImage());
 
         //check which image is selected and save to temp
         if(cardNumber ==1){
-            firstCard = cardsArray[card];
-            if(firstCard > 200){
-                firstCard = firstCard -100;
-            }
+            firstCard = cartas.get(card);
             cardNumber = 2;
             clickedFirst = card;
             iv.setEnabled(false);
         }else if(cardNumber ==2){
-            secondCard = cardsArray[card];
-            if(secondCard > 200){
-                secondCard = secondCard -100;
-            }
+            secondCard = cartas.get(card);
             cardNumber = 1;
             clickedSecond = card;
 
@@ -281,7 +229,7 @@ public class ActivityP2 extends AppCompatActivity {
         }
     }
 
-    private AlertDialog alertDialogConstructor(Context context, String title, int message, Drawable icon, boolean cancelable){
+    private AlertDialog alertDialogConstructor(Context context, String title, int message,int icon, boolean cancelable){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
         alertDialogBuilder
                 .setTitle(title)
@@ -298,26 +246,10 @@ public class ActivityP2 extends AppCompatActivity {
         return alertDialog;
     }
 
-    private AlertDialog alertDialogConstructor(Context context, String title,Drawable icon, boolean cancelable){
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
-        alertDialogBuilder
-                .setTitle(title)
-                .setIcon(icon)
-                .setCancelable(false)
-                .setNegativeButton("CERRAR", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        return alertDialog;
-    }
-
     private void calculate(){
 
         //Si las imagenes son iguales, quitarlas
-        if(firstCard == secondCard){
+        if(firstCard.equals(secondCard)){
             if(clickedFirst==0){
                 iv_11.setVisibility(View.INVISIBLE);
             }else if(clickedFirst==1){
@@ -354,69 +286,40 @@ public class ActivityP2 extends AppCompatActivity {
 
             if(clickedSecond==0){
                 iv_11.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_11.getDrawable(),true);
-                alertDialog.show();
             }else if(clickedSecond==1){
                 iv_12.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_12.getDrawable(),true);
-                alertDialog.show();
             }else if(clickedSecond==2){
                 iv_13.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_13.getDrawable(),true);
-                alertDialog.show();
             }else if(clickedSecond==3){
                 iv_14.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_14.getDrawable(),true);
-                alertDialog.show();
             }else if(clickedSecond==4){
                 iv_21.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_21.getDrawable(),true);
-                alertDialog.show();
             }else if(clickedSecond==5){
                 iv_22.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_22.getDrawable(),true);
-                alertDialog.show();
             }else if(clickedSecond==6){
                 iv_23.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_23.getDrawable(),true);
-                alertDialog.show();
             }else if(clickedSecond==7){
                 iv_24.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_24.getDrawable(),true);
-                alertDialog.show();
             }else if(clickedSecond==8){
                 iv_31.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_31.getDrawable(),true);
-                alertDialog.show();
             }else if(clickedSecond==9){
                 iv_32.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_32.getDrawable(),true);
-                alertDialog.show();
             }else if(clickedSecond==10){
                 iv_33.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_33.getDrawable(),true);
-                alertDialog.show();
             }else if(clickedSecond==11){
                 iv_34.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_34.getDrawable(),true);
-                alertDialog.show();
             }else if(clickedSecond==12){
                 iv_41.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_41.getDrawable(),true);
-                alertDialog.show();
             }else if(clickedSecond==13){
                 iv_42.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_42.getDrawable(),true);
-                alertDialog.show();
             }else if(clickedSecond==14){
                 iv_43.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_43.getDrawable(),true);
-                alertDialog.show();
             }else if(clickedSecond==15){
                 iv_44.setVisibility(View.INVISIBLE);
-                AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",iv_44.getDrawable(),true);
-                alertDialog.show();
             }
+
+            AlertDialog alertDialog = alertDialogConstructor(ActivityP2.this,"INFO!",firstCard.getDesc(),firstCard.getImage(),true);
+            alertDialog.show();
 
             if(turn ==1){
                 playerPoints++;
@@ -425,6 +328,8 @@ public class ActivityP2 extends AppCompatActivity {
                 cpuPoints++;
                 tv_p2.setText("P2: "+ cpuPoints);
             }
+
+
         } else{
             iv_11.setImageResource(R.drawable.question);
             iv_12.setImageResource(R.drawable.question);
@@ -453,6 +358,7 @@ public class ActivityP2 extends AppCompatActivity {
                 tv_p2.setTextColor(Color.GRAY);
                 tv_p1.setTextColor(Color.BLACK);
             }
+
         }
 
         iv_11.setEnabled(true);
@@ -495,7 +401,7 @@ public class ActivityP2 extends AppCompatActivity {
                 iv_44.getVisibility() == View.INVISIBLE){
             AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(ActivityP2.this);
             alertDialogBuilder
-                    .setMessage("GAME OVER! \nP1: " + playerPoints + "\nP2: " + cpuPoints)
+                    .setMessage("GAME OVER! \nP1: " + playerPoints + "\nP2: "+cpuPoints)
                     .setCancelable(false)
                     .setPositiveButton("NEW", new DialogInterface.OnClickListener() {
                         @Override
@@ -518,24 +424,45 @@ public class ActivityP2 extends AppCompatActivity {
         }
     }
 
+    private void generateCards(){
+        card101 = card201 = new Card("Ballena", image101,R.string.ballena_aleta);
+        card102 = card202 = new Card("Charrancito", image102,R.string.charrancito);
+        card103 = card203 = new Card("Codorniz", image103,R.string.codorniz);
+        card104 = card204 = new Card("Collar", image104,R.string.collar);
+        card105 = card205 = new Card("Coyote", image105,R.string.coyote);
+        card106 = card206 = new Card("Huilota", image106,R.string.huilota);
+        card107 = card207 = new Card("Lagartija", image107,R.string.lagartija);
+        card108 = card208 = new Card("Liebre", image108,R.string.liebre);
+
+        cartas.add(card101);
+        cartas.add(card102);
+        cartas.add(card103);
+        cartas.add(card104);
+        cartas.add(card105);
+        cartas.add(card106);
+        cartas.add(card107);
+        cartas.add(card108);
+        cartas.add(card201);
+        cartas.add(card202);
+        cartas.add(card203);
+        cartas.add(card204);
+        cartas.add(card205);
+        cartas.add(card206);
+        cartas.add(card207);
+        cartas.add(card208);
+
+    }
+
     //Cargar las imagenes
     private void frontOfCardsResorces(){
-        image101 = R.drawable.ballena_aleta;
-        image102 = R.drawable.charrancito;
-        image103 = R.drawable.codorniz;
-        image104 = R.drawable.collar;
-        image105 = R.drawable.coyote;
-        image106 = R.drawable.huilota;
-        image107 = R.drawable.lagartija;
-        image108 = R.drawable.liebre;
-        image201 = R.drawable.ballena_aleta;
-        image202 = R.drawable.charrancito;
-        image203 = R.drawable.codorniz;
-        image204 = R.drawable.collar;
-        image205 = R.drawable.coyote;
-        image206 = R.drawable.huilota;
-        image207 = R.drawable.lagartija;
-        image208 = R.drawable.liebre;
+        image101 = image201 = R.drawable.ballena_aleta;
+        image102 = image202 = R.drawable.charrancito;
+        image103 = image203 = R.drawable.codorniz;
+        image104 = image204 = R.drawable.collar;
+        image105 = image205 = R.drawable.coyote;
+        image106 = image206 = R.drawable.huilota;
+        image107 = image207 = R.drawable.lagartija;
+        image108 = image208 = R.drawable.liebre;
     }
 
 }

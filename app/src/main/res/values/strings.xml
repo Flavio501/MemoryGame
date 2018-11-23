@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Memorama Mexico</string>
+    <string name="ballena_aleta">Ubicación: Bahía de los Ángeles \nEstatus: Peligro \nClase: Mammalia \nFamilia: Balaneaopteridae </string>
+    <string name="charrancito">Ubicación: Golfo de California \nEstatus: Baja Preocupación \nClase: Ave \nFamilia: Sternidae </string>
+    <string name="codorniz">Ubicación: Baja California \nEstatus: Baja Preocupación \nClase: Ave \nFamilia: Faisanidae </string>
+    <string name="collar">Ubicación: Rosarito \nEstatus: Baja Preocupación \nClase: Ave \nFamilia: Columbidae </string>
+    <string name="coyote">Ubicación: Norte América \nEstatus: Baja Preocupación \nClase: Mammalia \nFamilia: Canidae </string>
+    <string name="huilota">Ubicación: Baja California \nEstatus: Baja Preocupación \nClase: Ave \nFamilia: Columbidae </string>
+    <string name="lagartija">Ubicación: Golfo de California \nEstatus: Casi en Peligro \nClase: Reptilia \nFamilia: Helodermatidae </string>
+    <string name="liebre">Ubicación: Baja California \nEstatus: Baja Preocupación \nClase: Mammalia \nFamilia: Leporidae </string>
 </resources>
