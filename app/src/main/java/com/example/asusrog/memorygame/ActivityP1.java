@@ -185,6 +185,18 @@ public class ActivityP1 extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed(){
+        try{
+            Intent intent = new Intent(getApplicationContext(),MainMenu.class);
+            startActivity(intent);
+            finish();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
     private void doStuff(ImageView iv, int card){
         //Poner la imagen correcta al imageview
         iv.setImageResource(cartas.get(card).getImage());
@@ -435,7 +447,6 @@ public class ActivityP1 extends AppCompatActivity {
         cartas.add(card208);
 
     }
-
     //Cargar las imagenes
     private void frontOfCardsResorces(){
         image101 = image201 = R.drawable.ballena_aleta;
@@ -447,5 +458,4 @@ public class ActivityP1 extends AppCompatActivity {
         image107 = image207 = R.drawable.lagartija;
         image108 = image208 = R.drawable.liebre;
     }
-
 }

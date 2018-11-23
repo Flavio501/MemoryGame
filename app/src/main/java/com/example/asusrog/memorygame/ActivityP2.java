@@ -47,6 +47,7 @@ public class ActivityP2 extends AppCompatActivity {
 
         tv_p1 = (TextView) findViewById(R.id.tv_p1);
         tv_p2 = (TextView) findViewById(R.id.tv_p2);
+        tv_p2.setTextColor(Color.GRAY);
 
         iv_11 = (ImageView) findViewById(R.id.iv_11);
         iv_12 = (ImageView) findViewById(R.id.iv_12);
@@ -183,6 +184,17 @@ public class ActivityP2 extends AppCompatActivity {
                 doStuff(iv_44,Integer.parseInt((String) v.getTag()));
             }
         });
+    }
+
+    @Override
+    public void onBackPressed(){
+        try{
+            Intent intent = new Intent(getApplicationContext(),MainMenu.class);
+            startActivity(intent);
+            finish();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
     }
 
     private void doStuff(ImageView iv, int card){

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Memorama Mexico</string>
+    <string name="app_name">Mexmorama</string>
     <string name="ballena_aleta">Ubicación: Bahía de los Ángeles \nEstatus: Peligro \nClase: Mammalia \nFamilia: Balaneaopteridae </string>
     <string name="charrancito">Ubicación: Golfo de California \nEstatus: Baja Preocupación \nClase: Ave \nFamilia: Sternidae </string>
     <string name="codorniz">Ubicación: Baja California \nEstatus: Baja Preocupación \nClase: Ave \nFamilia: Faisanidae </string>
